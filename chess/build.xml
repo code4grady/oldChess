@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<project name="chess" default="compile" basedir=".">
+
+   <property name="src.dir" value="./src"/>
+   <property name="compilelib.dir" value="./compileLib"/>
+   <property name="test.dir" value="./test"/>
+   <property name="war.dir" value="./war"/>
+   <property name="deploy.dir" value="./deploy"/>
+   <property name="service.name" value="chess"/>
+   <property name="db.dir" value="./database"/>
+   <property name="class.dir" value="${war.dir}/WEB-INF/classes"/>
+   <property name="test.class.dir" value="${test.dir}/classes"/>
+   <property name="database.url" value="jdbc:mysql://localhost/chess"/>
+
+   <path id="mysql.class.path">
+      <pathelement location="${war.dir}/WEB-INF/lib/mysql-connector-java-5.0.7-bin.jar"/>
+   </path>
+
+   <path id="chess.class.path">
+        <fileset dir="${compilelib.dir}">
+			<include name="*.jar" />
+		</fileset>
+      <pathelement location="${compilelib.dir}/servlet-api.jar"/>
+      <dirset dir="${basedir}"/>
+	</path>
+
+    <path id="run.class.path">
+        <path refid="chess.class.path"/>
+        <dirset dir="${class.dir}"/>
+    </path>
+    
+    <path id="junit.class.path">
+      <path refid="run.class.path"/>
+      <pathelement location="${test.dir}/lib/junit-4.7.jar"/>
+   </path>
+
+
+   <target name="clean" description="Erases contents of classes dir">
+      <delete dir="${class.dir}"/>
+      <delete dir="${test.class.dir}"/>
+   </target>
+   
+   <target name="init">
+      <mkdir dir="${class.dir}"/>
+      <mkdir dir="${test.class.dir}"/>
+   </target>
+   
+   
+   
+   <target name="compile" depends="clean, init"
+      description="Compiles all source code.">
+      <javac srcdir="${src.dir}" destdir="${class.dir}"
+         classpathref="chess.class.path"
+         debug="on"
+         debuglevel="lines,vars,source"/>
+   </target>
+
+
+   
+   <target name="deploy" depends="compile"
+      description="Compiles code, creates war file">
+      <delete file="${deploy.dir}/${service.name}.war" failonerror="false"/>
+      <war destfile="${deploy.dir}/${service.name}.war" manifest="${war.dir}/META-INF/MANIFEST.MF" webxml="${war.dir}/WEB-INF/web.xml" >
+        <fileset dir="rays"/>
+        <classes dir="${war.dir}/WEB-INF/classes" />
+        <lib dir="${war.dir}/WEB-INF/lib" />
+      </war>
+   </target>
+   
+   
+
+   
+   <!-- RUN DDL -->
+   <target name="create.tables">
+      <sql  driver="com.mysql.jdbc.Driver"
+            url="${database.url}"
+            userid="root"
+            password="admin">
+         <classpath>
+            <path refid="mysql.class.path"/>
+         </classpath>
+         <fileset dir="${db.dir}">
+            <include name="chessDDL.sql"/>
+         </fileset>
+      </sql>
+   </target>
+   
+   
+   
+   
+   <!-- TESTING STUFF -->
+   <target name="compile.test" depends="init" description="Compiles all unit test source">
+      <javac srcdir="${test.dir}"
+        classpathref="junit.class.path"
+        destdir="${test.class.dir}"/>
+   </target>
+
+   <target name="test" depends="compile.test"
+      description="Runs the unit tests">
+      <junit printsummary="withOutAndErr" haltonfailure="no"
+         haltonerror="no" fork="yes">
+         <classpath>
+           <path refid="junit.class.path"/>
+           <path refid="mysql.class.path"/>
+         </classpath>
+         <formatter type="xml" usefile="true" />
+         <batchtest todir="${test.dir}">
+            <fileset dir="${test.class.dir}">
+               <include name="*Test.*"/>
+            </fileset>
+         </batchtest>
+      </junit>
+   </target>
+
+</project>

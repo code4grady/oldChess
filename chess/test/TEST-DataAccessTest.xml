@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="GAGRADWOHL" name="DataAccessTest" tests="1" time="38.218" timestamp="2009-09-02T16:25:37">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) 2 Runtime Environment, Standard Edition" />
+    <property name="sun.boot.library.path" value="C:\Java\jdk1.5.0_04\jre\bin" />
+    <property name="java.vm.version" value="1.5.0_04-b05" />
+    <property name="ant.library.dir" value="C:\apache-ant-1.7.0\lib" />
+    <property name="ant.version" value="Apache Ant version 1.7.0 compiled on December 13 2006" />
+    <property name="ant.java.version" value="1.5" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="path.separator" value=";" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="user.country" value="US" />
+    <property name="sun.os.patch.level" value="Service Pack 3, v.5755" />
+    <property name="test.class.dir" value="./test/classes" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="user.dir" value="C:\chess" />
+    <property name="java.runtime.version" value="1.5.0_04-b05" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="basedir" value="C:\chess" />
+    <property name="database.url" value="jdbc:mysql://localhost/chess" />
+    <property name="java.endorsed.dirs" value="C:\Java\jdk1.5.0_04\jre\lib\endorsed" />
+    <property name="os.arch" value="x86" />
+    <property name="java.io.tmpdir" value="C:\DOCUME~1\GAGRAD~1\LOCALS~1\Temp\" />
+    <property name="ant.core.lib" value="C:\apache-ant-1.7.0\lib\ant.jar" />
+    <property name="line.separator" value="
+" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="service.name" value="chess" />
+    <property name="user.variant" value="" />
+    <property name="os.name" value="Windows XP" />
+    <property name="ant.home" value="C:\apache-ant-1.7.0" />
+    <property name="ant.project.name" value="chess" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="java.library.path" value="C:\Java\jdk1.5.0_04\jre\bin;.;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\CA\Dcs\DMScripting\;C:\Program Files\CA\DCS\CAWIN\;C:\oracle\ora92\bin;C:\Java\jdk1.5.0_04\bin;C:\Program Files\CA\SharedComponents\PEC\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32\WBEM;C:\Program Files\QuickTime\QTSystem\;C:\installations\Ant\apache-ant-1.6.2-bin\apache-ant-1.6.2\bin;C:\Program Files\CA\Cryptography\;C:\Program Files\CA\AllFusion Harvest Change Manager;C:\gwt\gwt-windows-1.5.0;C:\Program Files\MySQL\MySQL Server 5.0\bin;C:\Program Files\CA\Unicenter Software Delivery\BIN;C:\PROGRA~1\CA\SHARED~1\CAM\bin;C:\Program Files\IBM\Installation Manager\eclipse\lib;C:\Program Files\SSH Communications Security\SSH Secure Shell\;C:\Program Files\CVSNT\;C:\Program Files\Sybase\EAServer\bin;" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="49.0" />
+    <property name="sun.management.compiler" value="HotSpot Client Compiler" />
+    <property name="os.version" value="5.1" />
+    <property name="ant.file" value="C:\chess\build.xml" />
+    <property name="user.home" value="C:\Documents and Settings\gagradwohl" />
+    <property name="class.dir" value="./war/WEB-INF/classes" />
+    <property name="user.timezone" value="" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="java.specification.version" value="1.5" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="db.dir" value="./database" />
+    <property name="user.name" value="gagradwohl" />
+    <property name="java.class.path" value="C:\chess\compileLib\servlet-api.jar;C:\chess;C:\chess\compileLib;C:\chess\database;C:\chess\deploy;C:\chess\rays;C:\chess\rays\css;C:\chess\rays\images;C:\chess\rays\javascript;C:\chess\src;C:\chess\src\game;C:\chess\src\game\control;C:\chess\src\game\dataAccess;C:\chess\src\game\exception;C:\chess\src\game\gamePiece;C:\chess\src\game\servlet;C:\chess\src\game\strategy;C:\chess\src\game\strategy\dimensionAverage;C:\chess\src\game\strategy\historical;C:\chess\src\game\strategy\simple;C:\chess\src\game\util;C:\chess\test;C:\chess\test\classes;C:\chess\test\dataAccess;C:\chess\test\lib;C:\chess\war;C:\chess\war\META-INF;C:\chess\war\WEB-INF;C:\chess\war\WEB-INF\classes;C:\chess\war\WEB-INF\classes\game;C:\chess\war\WEB-INF\classes\game\control;C:\chess\war\WEB-INF\classes\game\dataAccess;C:\chess\war\WEB-INF\classes\game\exception;C:\chess\war\WEB-INF\classes\game\gamePiece;C:\chess\war\WEB-INF\classes\game\servlet;C:\chess\war\WEB-INF\classes\game\strategy;C:\chess\war\WEB-INF\classes\game\strategy\dimensionAverage;C:\chess\war\WEB-INF\classes\game\strategy\historical;C:\chess\war\WEB-INF\classes\game\strategy\simple;C:\chess\war\WEB-INF\classes\game\util;C:\chess\war\WEB-INF\lib;C:\chess\test\lib\junit-4.7.jar;C:\chess\war\WEB-INF\lib\mysql-connector-java-5.0.7-bin.jar;C:\apache-ant-1.7.0\lib\ant-launcher.jar;C:\apache-ant-1.7.0\lib\ant.jar;C:\apache-ant-1.7.0\lib\ant-junit.jar" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="java.home" value="C:\Java\jdk1.5.0_04\jre" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="user.language" value="en" />
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="java.vm.info" value="mixed mode, sharing" />
+    <property name="test.dir" value="./test" />
+    <property name="java.version" value="1.5.0_04" />
+    <property name="java.ext.dirs" value="C:\Java\jdk1.5.0_04\jre\lib\ext" />
+    <property name="sun.boot.class.path" value="C:\Java\jdk1.5.0_04\jre\lib\rt.jar;C:\Java\jdk1.5.0_04\jre\lib\i18n.jar;C:\Java\jdk1.5.0_04\jre\lib\sunrsasign.jar;C:\Java\jdk1.5.0_04\jre\lib\jsse.jar;C:\Java\jdk1.5.0_04\jre\lib\jce.jar;C:\Java\jdk1.5.0_04\jre\lib\charsets.jar;C:\Java\jdk1.5.0_04\jre\classes" />
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="deploy.dir" value="./deploy" />
+    <property name="compilelib.dir" value="./compileLib" />
+    <property name="file.separator" value="\" />
+    <property name="src.dir" value="./src" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="ant.file.chess" value="C:\chess\build.xml" />
+    <property name="sun.desktop" value="windows" />
+    <property name="war.dir" value="./war" />
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86" />
+  </properties>
+  <testcase classname="DataAccessTest" name="testJDBC" time="38.171" />
+  <system-out><![CDATA[ starting testJDBC
+insert complete
+    MOVE_SUMMARY  found abcd
+query complete
+cleanup complete
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

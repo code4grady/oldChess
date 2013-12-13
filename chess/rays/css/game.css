@@ -1,0 +1,101 @@
+#popupMask {
+	position: absolute;
+	z-index: 200;
+	left:0px;
+	top:0px;
+	height:100%;
+	width:100%;
+	opacity: .2;
+	filter: alpha(opacity=20);
+	background-color:transparent !important;
+	background-color: #FFFFFF;
+	display:none;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.boardbkgd
+{
+	position:absolute;
+	left:20px;
+	top:20px;
+	border:solid 1px black;
+	border-right:solid 2px black;
+	border-bottom:solid 2px black;
+	z-index:20;
+}
+
+img
+{
+	cursor:pointer;
+}
+
+.chesspiece
+{
+	height:50px;
+	width:50px;
+	border:none; /* dashed 1px red; */
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:20;
+}
+
+.darkMoveMarker
+{
+	position:absolute;
+	z-index:0;
+	background-color:#00dd00;
+	font-family:Arial;
+	text-align:center;
+	color:#cccccc;
+}
+
+.lightMoveMarker
+{
+	position:absolute;
+	z-index:0;
+	background-color:#99ff99;
+	font-family:Arial;
+	text-align:center;
+	color:#cccccc;
+}
+
+.capturemarker
+{
+	position:absolute;
+	z-index:0;
+	background-color:#ff7777;
+	font-family:Arial;
+	text-align:center;
+	color:#cccccc;
+}
+
+
+.blacksquare
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:50;
+	width:50;
+	z-index:0;
+	background-color:#aaaaaa;
+	font-family:Arial;
+	text-align:center;
+	color:#cccccc;
+}
+
+.whitesquare
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:50;
+	width:50;
+	z-index:0;
+	background-color:#FFFFf3;
+	font-family:Arial;
+	text-align:center;
+	color:#dddddd;
+}

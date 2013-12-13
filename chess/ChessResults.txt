@@ -1,0 +1,107 @@
+
+
+--------------------------------------------------------------------------
+White standard strategy
+black deminsion average stragegy
+
+
+mysql> select distinct(result) from game;
++-----------+
+| result    |
++-----------+
+| STALEMATE |
+| W WIN     |
+| LOSE      |
++-----------+
+3 rows in set (0.03 sec)
+
+
+mysql> select count(*) from game;
++----------+
+| count(*) |
++----------+
+|    10007 |
++----------+
+1 row in set (1.50 sec)
+
+
+mysql> select count(*) from game where result like 'W%';
++----------+
+| count(*) |
++----------+
+|      588 |
++----------+
+1 row in set (0.00 sec)
+
+
+mysql> select count(*) from game where result like'L%';
++----------+
+| count(*) |
++----------+
+|      719 |
++----------+
+1 row in set (0.02 sec)
+
+
+mysql> select count(*) from game where result like'STALEMATE';
++----------+
+| count(*) |
++----------+
+|     8700 |
++----------+
+1 row in set (0.00 sec)
+
+
+Observation:
+dimension appears to win approx 20% more of the time than standard strategy with second move.
+
+
+
+--------------------------------------------------------------------------
+White deminsion average strategy
+black standard stragegy
+
+mysql> select count(*) from game;
++----------+
+| count(*) |
++----------+
+|    20007 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from game where result like 'W%';
++----------+
+| count(*) |
++----------+
+|     1607 |
++----------+
+1 row in set (0.02 sec)
+adjusted = 1019
+
+
+mysql> select count(*) from game where result like'L%';
++----------+
+| count(*) |
++----------+
+|     1302 |
++----------+
+1 row in set (0.47 sec)
+adjusted = 583
+
+
+mysql> select count(*) from game where result like'STALEMATE';
++----------+
+| count(*) |
++----------+
+|    17098 |
++----------+
+1 row in set (0.01 sec)
+adjusted = 8398
+
+
+
+dimension appears to wind almost 40% of the time with "first move". 
+
+
+
+

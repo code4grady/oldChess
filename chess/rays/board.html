@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<LINK REL='STYLESHEET' TYPE='text/css' HREF='css/game.css'>
+<script type="text/javascript" src="javascript/minidom.js"></script>
+<script type="text/javascript" src="javascript/debugger.js"></script>
+<script type="text/javascript" src="javascript/common.js"></script>
+<script type="text/javascript" src="javascript/dom-drag.js"></script>
+<script type="text/javascript" src="javascript/gamecommon.js"></script>
+</HEAD>
+<BODY onload="initgame();">
+<DIV ID="popupMask"></DIV>
+<DIV ID="board"></DIV>
+<DIV id="creator" style="display:none;" ></DIV>
+
+<INPUT TYPE="BUTTON" style="position:absolute;top:20px;left:440px;" VALUE="Start New Game" onclick="startGame();">
+<INPUT TYPE="BUTTON" style="position:absolute;top:60px;left:440px;" VALUE="Send Move" onclick="sendMove(false);">
+<DIV ID="waitmessage" style="display:none;position:absolute;top:340px;left:490px;"><img src="images/spinner.gif"></DIV>
+
+<TEXTAREA id="outputwindow" COLS=20 ROWS=15 style="font-size:8pt;position:absolute;top:100px;left:440px;"></TEXTAREA>
+<TEXTAREA id="outputwindow2" COLS=85 ROWS=9 style="font-size:8pt;position:absolute;top:430px;left:20px;"></TEXTAREA>
+
+<FORM NAME="CHESSGAMEFORM">
+<INPUT TYPE="HIDDEN" VALUE="" NAME="GAMEID">
+<INPUT TYPE="HIDDEN" NAME="GAMESTATE"></INPUT>
+</FORM>
+</BODY>
+</HTML>
